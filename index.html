@@ -1,0 +1,347 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Free as in Beer</title>
+
+		<link rel="stylesheet" href="./reveal.js/dist/reset.css">
+		<link rel="stylesheet" href="./reveal.js/dist/reveal.css">
+		<link rel="stylesheet" href="./reveal.js/css/theme/erin.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal/plugin/highlight/monokai.css">
+
+	</head>
+	<body>
+		<div class="reveal" data-background-size="contain">
+			<div class="slides">
+				<section>
+					<img src="./media/title-page.png">
+				</section>
+				<section>
+					Slides are available at:<p>
+					<a href="https://slides.frowning.wtf/static-analysis">https://slides.frowning.wtf/static-analysis</a>
+				</section>
+				<section>Watch <a href="https://www.youtube.com/watch?v=jDu5xVLce04">the recording</a> on Youtube!</section>
+				<section>
+					<h3>$whoami</h3>
+					<section>
+						<div style="float: center;">
+							<p>Erin Browning</p>
+							<p>Senior Security Engineer</p>
+							<p>@Slack</p>
+						</div>
+					</section>
+					<section>
+						<div style="position: absolute; top: 10%; left: 1%">
+							<img src="./media/frown-turtle.png" style="height: 240px;">
+						</div>
+						<div style="position: absolute; top:10%; left: 35%">
+							<p>You can contact me at:</p>
+							<p><a href="mailto:erin@frowning.wtf">erin@frowning.wtf</a></p>
+							<p><a href="https://www.twitter.com/efrowning">@efrowning</a></p>
+						</div>
+					</section>
+				</section>
+				<section> <br><br><br><img src="media/20.png">
+					<section> Tim Faraci
+						<p> Staff Security Engineer @Slack <br><br> </section><section>
+						<p> <a href="mailto:faracitim@gmail.com">faracitim@gmail.com</a>
+							<p> <a href="https://www.linkedin.com/in/timfaraci/">Linkedin - timfaraci <br><br></a> </section>
+				</section>
+				<section>
+					<section>
+						<img src="./media/slack-logo.svg" alt="slack logo" height="80%">
+					</section>
+					<section>
+						<h3 font-weight="900"><font color="#38BA96">Slack is hiring!</font></h3><p>
+						Slack is used by millions of people every day – we need engineers who want to make that experience as secure and enjoyable as possible.<p>
+						<a href="slack.com/jobs" style="color:#38ba96;">slack.com/jobs</a>
+					</section>
+				</section>
+				<section>	
+					<section>
+						Both of us have lots of experience implementing static analysis programs.<br>
+					</section>			
+					<section>
+						Erin has previously implemented a static analysis <br> program for 1200 devs <br> across multiple languages for lots of different compliance standards.
+					</section>
+				</section>
+				<section> <br><br><br><img src="media/20.png">
+					<section>Tim Faraci has implemented: </section>
+					<section>Multiple SAST Programs</section>
+					<section>Medium and Large Companies</section>
+					<section>PCI, HIPPA, FedRamp</section>
+					<section>Experience in Commercial & Open Source</section>
+				</section>
+				<section>
+					<section>Current Commercial Problem - SAST<img src="media/22.png"></section>
+					<section>Hours vs Minutes <img src="media/3.png"></section>
+					<section>200k + Implementaion <img src="media/21.png"></section>
+					<section>Yearly Sales Negotiations<img src="media/23.png"></section>
+					<section>Mystery Secret Scanning Sauce <img src="media/4.png"></section>
+					<section>There is a Better Way! <img src="media/24.png"></section>
+					<section>Open Source - Easier Implementation<img src="media/2.png""></section>
+					<section>Get Scan Results Fast! Keep Devs Happy!<img src="media/8.png"></section>
+					<section>Lots of Language Support <img src="media/9.png"></section>
+					<section>Leverage the Power of Open Source Community<img src="media/10.png" ></section>
+					<section>Find Vulnerabilities!<img src="media/6.png" ></section>
+					<section>Get Compliance Checkbox!<img src="media/7.png"></section>
+					<section>Check Out Semgrep! <img src="media/18.png"></section>
+				</section>
+				<section> We need:
+					<section>
+						<div style="position: absolute; top: 10%; left: 1%">
+							<img src="./media/sun-turtle-left.png" style="height: 240px;">
+						</div>
+						<div style="position: absolute; top:10%; left: 35%">
+							1. A generic engine
+						</div>
+					</section>
+					<section>
+						<div style="position: absolute; top: 10%; left: 1%">
+							<img src="./media/sun-turtle.png" style="height: 240px;">
+						</div>
+						<div style="position: absolute; top:10%; left: 35%">
+							2. Ability to tune and define the ruleset
+						</div>
+					</section>
+					<section>
+						<div style="position: absolute; top: 10%; left: 1%">
+							<img src="./media/sun-turtle-left.png" style="height: 240px;">
+						</div>
+						<div style="position: absolute; top:10%; left: 35%">
+							3. Ability to build and control our own infra
+						</div>
+					</section>
+				</section>
+				<section>
+					<section>
+						<img src="./media/semgrep.png">
+						It's a language agnostic static analysis engine.<br>
+						It can injest a language's abstract syntax tree and a ruleset to analyse codebases.
+					</section>
+					<section>
+						How?
+						<img src="./media/question-turtle.png" style="height: 240px;">
+					</section>
+					<section>
+						<img src="./media/syntax-trees.png" style="height: 600px">
+					</section>
+					<section>
+						It uses parsers to create strongly typed, representative syntax trees
+					</section>
+					<section>
+						Download open source rules or<br>
+						write your own<br>
+						The rules are yaml files; they're easy to write or modify<br>
+					</section>
+					<section>
+						<img src="./media/rule-ex.png" style="height: 500px;">
+					</section>
+					<section>
+						Shout out to r2c!
+						<img src="./media/r2c.svg" style="height: 400px;">
+					</section>
+				</section>
+				<section>
+					<section>
+						<div style="float: right;">
+							<img src="./media/question-turtle.png" style="height: 240px;">
+						</div>
+						<div>
+							We have a generic engine. How can we use it to easily scale up our static analysis program?
+						</div>
+					</section>
+					<section>
+						We're moving the work of a static analysis program to the left.
+						<img src="./media/cost.png">
+					</section>
+					<section>
+						First of all, we need easy-to-maintain architecture
+					</section>
+					<section>
+						Enabled file
+						<img src="./media/enabled.png">
+					</section>
+					<section>
+						Handling false positives<br>
+						We chose to use a JSON file for super easy maintenance<br>
+						<img src="./media/false-positives.png">
+					</section>
+					<section>We remove false positives via an identifier</section>
+					<section>
+						Hash IDs are created with this data:
+						<ul>
+							<li>file path</li>
+							<li>three lines of code before, one line after</li>
+							<li>the triggered rule name</li>
+						</ul><br>
+						We don't use the line number--it's too fragile!
+					</section>
+					<section>
+						Developers can create PRs to add false positives in new scans<br>
+						Security can review their request
+					</section>
+					<section>
+						We can also do comparisons over time or by branch based on the identiers
+						<pre class="python">
+						<code data-trim data-noescape data-line-numbers style="max-height: 500px;">
+def compare_to_last_run(old_output, new_output, output_filename):
+	"""
+	This compares two scan runs to each other.
+	It only keeps findings that are exclusively in the new run.
+	"""
+	old = open_json(old_output)
+	new = open_json(new_output)
+	old_hashes = get_hash_ids(old)
+	new_hashes = get_hash_ids(new)
+
+	for new_issue_hash in new_hashes:
+	    if new_issue_hash in old_hashes:
+	        new["results"].remove(new_hashes[new_issue_hash])
+	                
+	write_json(output_filename, new)
+	return new
+						</code>
+						</pre>
+					</section>
+					<section>
+						<div style="float: left;">
+							<img src="./media/sun-turtle.png" style="height: 300px;">
+						</div>
+						<br>
+						We currently perform:<br>
+						<ul>
+							<li>A daily comparison</li>
+							<li>A branch comparison</li>
+						</ul>
+					</section>
+					<section>
+						The daily scan compares today to yesterday for all enabled repos. It runs in Jenkins.
+					</section>
+				</section>
+				<section>
+					<section>Pull Request Scan <img src="media/16.png"></section>
+					<section>Outputting Results <img src="media/15.png"></section>
+					<section>Alerts <img src="media/14.png"></section>
+					<section>Metrics <img src="media/17.png"></section>
+					<section>Semgrep Rules <img src="media/19.png"></section>
+					<section>Dev Requesting False Positive Via GitHu <img src="media/11.png"></section>
+					<section>Development Education <img src="media/12.png"></section>
+					<section>Because we own the infrastructure. We can make it faster!<img src="media/13.png"></section>
+				</section>
+				<section>
+					<section>
+						<div style="float: right;">
+							<img src="./media/question-turtle.png" style="height: 240px;">
+						</div>
+						How easy is it to add a language to semgrep?
+					</section>
+					<section>
+						An intern could do it!<br>
+						<p class="fragment fade-up">Or two interns</p>
+						<p class="fragment fade-up">Who are almost done with computer science degrees</p>
+					</section>
+					<section>
+						<div style="float: left;">
+						<img src="./media/david.png" style="height: 500px; display:inline-block;"><br>David Frankel</div>
+						<div style="float: left;">
+						<img src="./media/nicholas.jpg" style="height: 500px;display:inline-block;"><br>Nicholas Lin</div>
+					</section>
+					<section>
+						<div style="float: left;">
+						<img src="./media/david-sunglasses.gif" style="height: 500px; display:inline-block;"></div>
+						<div style="float: left;">
+						<img src="./media/nicholas-sunglasses.gif" style="height: 500px; display:inline-block;"></div>
+					</section>
+					<section>
+						We've been working on:<br>
+						Project SUSHI<br>
+						Static analysis Using Semgrep (with) Hack Integration
+						<img src="./media/sushi.png" height=400px>
+					</section>
+					<section>
+						<img src="./media/ocaml-tree-sitter.png">
+					</section>
+					<section>
+						<img src="./media/tree-sitter.PNG" style="height: 400px"><br>
+						Github's <a href="https://tree-sitter.github.io/tree-sitter/">tree-sitter</a><br>
+					</section>
+					<section>
+						Generic AST parser conversion
+						<img src="./media/ocaml-sushi.jpg">
+					</section>
+					<section>
+						Finally, rule creation<br>
+						<img src="./media/rule-ex.png">
+					</section>
+				</section>
+				<section>
+					<section>
+						Putting it all together
+						<p class="fragment fade-up">1. Enabled file</p>
+						<p class="fragment fade-up">2. Empty json for false positives</p>
+						<p class="fragment fade-up">3. Review the results</p>
+						<p class="fragment fade-up">4. Bam! You're scanning that codebase</p>
+						<p class="fragment fade-up">5. You are now in...</p>
+					</section>
+					<section><img src="./media/compliance-bang.png"></section>
+				</section>
+				<section>
+						<div style="float: right;">
+							<img src="./media/sun-turtle.png" style="height: 240px;">
+						</div>
+						Thanks to:<br>
+						<p class="fragment fade-up">The SNOW team</p>
+						<p class="fragment fade-up">R2C</p>
+						<p class="fragment fade-up">Our wonderful summer interns, Nicholas and David</p>
+						<p class="fragment fade-up">Slack</p>
+						<p class="fragment fade-up">The AppSec Village</p>
+				</section>
+				<section>
+						<div style="float: left;">
+							<img src="./media/sun-turtle.png" style="height: 240px;">
+						</div>
+						Thanks to:<br>
+						<p class="fragment fade-up">Antonio de Jesus Ochoa Solano</p>
+						<p class="fragment fade-up">Ryan Slama</p>
+				</section>
+				<section>
+					Further reading:<br>
+					<ul>
+						<li><a href="https://eli.thegreenplace.net/2009/02/16/abstract-vs-concrete-syntax-trees"> Eli Bendersky's Abstract vs Concrete Syntax Trees</a></li>
+						<li><a href="https://github.com/returntocorp/ocaml-tree-sitter-core">R2C's tree-sitter CST to OCaml parser converters</a></li>
+						<li><a href="https://semgrep.dev">Semgrep</a>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="./reveal.js/dist/reveal.js"></script>
+		<link rel="stylesheet" href="./reveal.js/plugin/highlight/monokai.css">
+		<script src="./reveal.js/plugin/highlight/highlight.js"></script>
+		<script>
+		  Reveal.initialize({
+		    plugins: [ RevealHighlight ]
+		  });
+		</script>
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: './reveal.js/plugin/markdown/marked.js' },
+					{ src: './reveal.js/plugin/markdown/markdown.js' },
+					{ src: './reveal.js/plugin/notes/notes.js', async: true },
+					{ src: './reveal.js/plugin/highlight/highlight.js', async: true }
+				]
+			});
+			Reveal.configure({ slideNumber: true },
+				{ slideNumber: 'c/t' });
+		</script>
+	</body>
+</html>
